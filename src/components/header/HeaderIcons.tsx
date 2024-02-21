@@ -11,10 +11,10 @@ const HeaderIcons: React.FC<HeaderIconsProps> = ({ icon, title, link }) => {
         <>
             <a
                 href={link}
-                className='text-lividBrown-900 rounded-md p-2 cursor-pointer w-12 sm:hover:bg-lividBrown-900 sm:hover:text-lividBrown-400'>
+                className='text-neptune-900 rounded-md p-2 cursor-pointer w-12 sm:hover:bg-neptune-900 sm:hover:text-neptune-400'>
                 <div className='flex flex-col justify-center items-center'>
                     {icon}
-                    <div className='text-center text-xs hidden sm:block'>{title}</div>
+                    <div className='text-center text-xs'>{title}</div>
                 </div>
             </a>
         </>

@@ -10,16 +10,16 @@ import HeaderIcons from "./HeaderIcons";
 const Header = () => {
     return (
         <>
-            <div className='bg-lividBrown-400 text-lividBrown-900 py-2 lg:flex lg:items-center'>
-                <div className='text-lividBrown-900 font-bold text-center uppercase text-lg lg:text-xl lg:ml-5'>
+            <div className='bg-neptune-400 text-neptune-900 shadow-lg py-2 lg:flex lg:items-center'>
+                <div className='text-neptune-900 font-bold text-center uppercase text-lg lg:text-xl lg:ml-5'>
                     HackaTour
-                    <div className='lg:hidden inline ml-5 text-lividBrown-900'>
+                    <div className='lg:hidden inline ml-5 text-neptune-900'>
                         <button className='cursor-pointer'>
                             <AccountCircleOutlinedIcon />
                         </button>
                     </div>
                 </div>
-                <div className='flex justify-center flex-wrap mt-2 gap-5 lg:mx-auto'>
+                <div className='flex justify-center flex-wrap mt-2 gap-5 lg:mt-0 lg:mx-auto'>
                     {/* Avion */}
                     <HeaderIcons icon={<AirplaneTicketOutlinedIcon />} title={"Vuelos"} link='/' />
                     {/* Hotel */}
@@ -37,7 +37,7 @@ const Header = () => {
                     {/* Excursiones */}
                     <HeaderIcons icon={<KayakingOutlinedIcon />} title={"Salidas"} link='/' />
                 </div>
-                <div className='hidden lg:flex lg:justify-center lg:mr-5 text-lividBrown-900'>
+                <div className='hidden lg:flex lg:justify-center lg:mr-5 text-neptune-900'>
                     <button className='cursor-pointer'>
                         <AccountCircleOutlinedIcon />
                         <div className='hidden lg:inline lg:pl-2'>Iniciar Sesion</div>
