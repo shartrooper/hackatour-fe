@@ -1,4 +1,5 @@
 import React from "react";
+import Ribbon from "../ui/Ribbon";
 
 interface Offer {
     id: number;
@@ -13,25 +14,28 @@ interface Offer {
 
 const TripCard: React.FC<{ offer: Offer }> = ({ offer }) => {
     return (
-        <div className='border border-gray-200 bg-neptune-200 p-4 rounded-lg shadow-md'>
-            <img
-                src={offer.destinationImage}
-                alt={offer.destination}
-                className='w-full h-40 object-cover rounded-md mb-4'
-            />
-            <h2 className='text-xl font-semibold mb-2'>{offer.destination}</h2>
-            <p className='text-gray-600 mb-2'>{offer.destinationDescription}</p>
-            <div className='flex justify-between items-center'>
-                <p className='text-gray-500'>
-                    {offer.origin} - {offer.destination}
-                </p>
-                <p className='text-gray-500'>${offer.price}</p>
+        <>
+            <Ribbon>{offer.destination}</Ribbon>
+            <div className='flex gap-5 bg-white rounded-lg'>
+                <img
+                    src={offer.destinationImage}
+                    alt={offer.destination}
+                    className='w-32 h-auto object-cover rounded-s-md'
+                />
+                <div className='flex flex-col my-2'>
+                    <p className='text-xs text-zinc-900 uppercase'>Ida y vuelta</p>
+                    <h2 className='font-bold text-zinc-900'>
+                        {offer.origin} - {offer.destination}
+                    </h2>
+                    <div className='mt-5'>
+                        <p>Desde</p>
+                        <p className='text-neptune-800 text-lg font-bold'>
+                            {offer.price.toLocaleString("es-AR")} USD
+                        </p>
+                    </div>
+                </div>
             </div>
-            <div className='flex justify-between items-center mt-2'>
-                <p className='text-gray-500'>Departure: {offer.departureDate}</p>
-                <p className='text-gray-500'>Arrival: {offer.arrivalDate}</p>
-            </div>
-        </div>
+        </>
     );
 };
 

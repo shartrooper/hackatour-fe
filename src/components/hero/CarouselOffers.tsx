@@ -23,6 +23,7 @@ interface Offer {
 
 const CarouselDemo: React.FC = () => {
     const [offers, setOffers] = useState<Offer[]>([]);
+    // const [loading, setLoading] = useState<Boolean>(true)
 
     useEffect(() => {
         const fetchData = async () => {
@@ -36,7 +37,7 @@ const CarouselDemo: React.FC = () => {
     }, []);
 
     return (
-        <Carousel className='w-full max-w-xs'>
+        <Carousel className='w-full max-w-xs max-h-fit'>
             <CarouselContent>
                 {offers.map((offer) => (
                     <CarouselItem key={offer.id}>
