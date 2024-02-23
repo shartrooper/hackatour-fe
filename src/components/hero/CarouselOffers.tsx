@@ -1,11 +1,6 @@
 import React, { useEffect, useState } from "react";
-import {
-    Carousel,
-    CarouselContent,
-    CarouselItem,
-    CarouselNext,
-    CarouselPrevious,
-} from "@/components/ui/carousel";
+import { Carousel, CarouselContent, CarouselItem } from "@/components/ui/carousel";
+import Autoplay from "embla-carousel-autoplay";
 
 import CarouselOffersCard from "@/components/hero/CarouselOffersCard";
 import fakeData from "@/config/fakeData.json";
@@ -21,7 +16,7 @@ interface Offer {
     destinationImage: string;
 }
 
-const CarouselDemo: React.FC = () => {
+const CarouselOffers: React.FC = () => {
     const [offers, setOffers] = useState<Offer[]>([]);
     // const [loading, setLoading] = useState<Boolean>(true)
 
@@ -37,18 +32,25 @@ const CarouselDemo: React.FC = () => {
     }, []);
 
     return (
-        <Carousel className='w-full max-w-xs max-h-fit'>
+        <Carousel
+            className='w-full max-w-xs lg:max-w-5xl max-h-fit'
+            plugins={[
+                Autoplay({
+                    delay: 3000,
+                }),
+            ]}
+            opts={{
+                loop: true,
+            }}>
             <CarouselContent>
                 {offers.map((offer) => (
-                    <CarouselItem key={offer.id}>
+                    <CarouselItem key={offer.id} className='lg:basis-1/3'>
                         <CarouselOffersCard offer={offer} />
                     </CarouselItem>
                 ))}
             </CarouselContent>
-            <CarouselPrevious />
-            <CarouselNext />
         </Carousel>
     );
 };
 
-export default CarouselDemo;
+export default CarouselOffers;

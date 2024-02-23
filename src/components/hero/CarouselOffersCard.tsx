@@ -29,7 +29,7 @@ const TripCard: React.FC<{ offer: Offer }> = ({ offer }) => {
                     </h2>
                     <div className='mt-5'>
                         <p>Desde</p>
-                        <p className='text-neptune-800 text-lg font-bold'>
+                        <p className='text-zinc-900 text-lg font-bold'>
                             {offer.price.toLocaleString("es-AR")} USD
                         </p>
                     </div>
