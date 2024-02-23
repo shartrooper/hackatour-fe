@@ -1,5 +1,5 @@
-import AppButton from "../ui/AppButton";
-import AppInput from "../ui/AppInput";
+import AppButton from "../ui/button/AppButton";
+import AppInput from "../ui/input/AppInput";
 import heroImage from "/images/hero-image.jpg";
 import CarouselOffers from "@/components/hero/CarouselOffers";
 
@@ -33,17 +33,13 @@ const Hero = () => {
                 </div>
             </div>
             <div className='flex justify-center items-center mb-5 md:max-w-lg md:mx-auto'>
-                <div className='w-11/12 bg-neptune-400 bg-opacity-70 rounded-lg p-4 border border-neptune-400 shadow-xl'>
+                <div className='w-11/12 bg-slate-50 opacity-95 rounded-lg p-4 border border-neptune-400 shadow-xl'>
                     <h2 className='text-center text-zinc-800 text-lg lg:text-2xl font-bold'>
                         Encuentra tu próximo destino
                     </h2>
-                    <div className='flex flex-col lg:flex-row lg:gap-5 justify-center items-center'>
-                        <div className='my-5'>
-                            <AppInput className='bg-white max-h-20'>Buscar</AppInput>
-                        </div>
-                        <div className=''>
-                            <AppButton url='/search'>Buscar</AppButton>
-                        </div>
+                    <div className='flex flex-col lg:flex-row lg:items-end gap-5 justify-center items-center mt-5'>
+                        <AppInput placeholder='Buscar' />
+                        <AppButton url='/search'>Buscar</AppButton>
                     </div>
                 </div>
             </div>
