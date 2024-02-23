@@ -3,13 +3,13 @@ import React from "react";
 // RRD
 import { Link } from "react-router-dom";
 
-interface AppButtonProps {
+interface OutlinedButtonProps {
     url: string;
     children: React.ReactNode;
     disabled?: boolean;
 }
 
-const AppButton: React.FC<AppButtonProps> = ({ children, url, disabled }) => {
+const OutlinedButton: React.FC<OutlinedButtonProps> = ({ children, url, disabled }) => {
     return (
         <Link
             to={disabled ? "#" : url}
@@ -23,4 +23,4 @@ const AppButton: React.FC<AppButtonProps> = ({ children, url, disabled }) => {
     );
 };
 
-export default AppButton;
+export default OutlinedButton;
