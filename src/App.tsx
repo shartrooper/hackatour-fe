@@ -7,11 +7,14 @@ import Cars from "./views/Cars";
 import Buses from "./views/Buses";
 import Trains from "./views/Trains";
 import Activities from "./views/Activities";
+import Footer from "./components/footer/Footer";
+
+// Sessions Components
 import Login from "./views/sessions/Login";
+import Register from "./views/sessions/Register";
 
 // RRD
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Footer from "./components/footer/Footer";
 
 function App() {
     return (
@@ -22,6 +25,7 @@ function App() {
                     <Route path='/' element={<Homepage />} />
                     {/* Sessions */}
                     <Route path='/login' element={<Login />} />
+                    <Route path='/register' element={<Register />} />
                     {/* Services */}
                     <Route path='/flights' element={<Flights />} />
                     <Route path='/hotels' element={<Hotels />} />
