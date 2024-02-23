@@ -1,7 +1,8 @@
 import React from "react";
+import Register from "./sessions/Register";
 
 const Activities = () => {
-    return <div>Activities</div>;
+    return <Register />;
 };
 
 export default Activities;
