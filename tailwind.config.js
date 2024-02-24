@@ -56,6 +56,8 @@ export default {
     backgroundImage: {
       "hero-sm": "url('/images/hero-image-sm.jpg')",
       "hero-lg": "url('/images/hero-image-lg.jpg')",
+      "side-gradient":
+        "linear-gradient(152.92deg, rgba(192, 132, 252, 0.2) 4.54%, rgba(232, 121, 249, 0.26) 34.2%, rgba(192, 132, 252, 0.1) 77.55%)",
     },
   },
   plugins: ["tailwindcss-animate"],
