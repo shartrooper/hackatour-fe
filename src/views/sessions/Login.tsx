@@ -24,7 +24,7 @@ const Login = () => {
         </SideContent>
         <div className="absolute inset-0 my-auto h-[500px] bg-side-gradient blur-[120px]" />
       </div>
-      <div className="flex-1 flex items-center justify-center min-h-screen">
+      <div className="flex-1 flex items-center justify-center min-h-screen mb-2">
         <div className="w-full max-w-md space-y-8 px-4 text-gray-600 sm:px-0">
           <div>
             <img src={logo1} width={250} className="mx-auto" />

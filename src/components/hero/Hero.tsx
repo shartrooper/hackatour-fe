@@ -4,7 +4,7 @@ import CarouselOffers from "@/components/hero/CarouselOffers";
 
 const Hero = () => {
   return (
-    <div className="w-full h-full bg-cover bg-hero-sm lg:bg-hero-lg">
+    <div className="w-full h-full bg-[length:100%_100%] bg-hero-sm lg:bg-hero-lg">
       <div className="flex flex-col justify-center items-center">
         <h1
           className="my-5
