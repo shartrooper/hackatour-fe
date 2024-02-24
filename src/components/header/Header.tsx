@@ -9,7 +9,7 @@ import HeaderIcons from "../ui/IconWrapper";
 
 // RRD
 import { Link } from "react-router-dom";
-import { ModalContainer } from "../Modal/Container";
+import { ModalContainer } from "../modal/Container";
 import { useState } from "react";
 
 const Header = () => {

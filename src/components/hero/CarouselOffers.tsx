@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Carousel, CarouselContent, CarouselItem } from "@/components/ui/carousel";
+import { Carousel, CarouselContent, CarouselItem } from "@/components/ui/Carousel";
 import Autoplay from "embla-carousel-autoplay";
 
 import CarouselOffersCard from "@/components/hero/CarouselOffersCard";
