@@ -4,78 +4,85 @@ import TimeToLeaveOutlinedIcon from "@mui/icons-material/TimeToLeaveOutlined";
 import DirectionsBusFilledOutlinedIcon from "@mui/icons-material/DirectionsBusFilledOutlined";
 import TrainOutlinedIcon from "@mui/icons-material/TrainOutlined";
 import KayakingOutlinedIcon from "@mui/icons-material/KayakingOutlined";
-import AccountCircleOutlinedIcon from "@mui/icons-material/AccountCircleOutlined";
-import HeaderIcons from "../ui/IconWrapper";
 
-// RRD
+import AccountCircleOutlinedIcon from "@mui/icons-material/AccountCircleOutlined";
+import logo1 from "/images/logo1.png";
+import IconWrapper from "../ui/IconWrapper";
+
 import { Link } from "react-router-dom";
-import { ModalContainer } from "../modal/Container";
-import { useState } from "react";
+import HeaderBurgerMenu from "./HeaderBurgerMenu";
 
 const Header = () => {
-  const [showModal, setShowModal] = useState(false);
+    const menuMap = [
+        {
+            icon: <AirplaneTicketOutlinedIcon />,
+            title: "Vuelos",
+            link: "/flights",
+        },
+        {
+            icon: <BedOutlinedIcon />,
+            title: "Hoteles",
+            link: "/hotels",
+        },
+        {
+            icon: <TimeToLeaveOutlinedIcon />,
+            title: "Autos",
+            link: "/cars",
+        },
+        {
+            icon: <DirectionsBusFilledOutlinedIcon />,
+            title: "Micros",
+            link: "/buses",
+        },
+        {
+            icon: <TrainOutlinedIcon />,
+            title: "Trenes",
+            link: "/trains",
+        },
+        {
+            icon: <KayakingOutlinedIcon />,
+            title: "Actividades",
+            link: "/activities",
+        },
+    ];
 
-  const handleToggle = () => setShowModal((prev) => !prev);
+    return (
+        <>
+            <nav className='bg-gray-800 p-2'>
+                <div className='flex justify-between items-center'>
+                    <div className='hidden lg:flex items-center'>
+                        {menuMap.map((item, index) => (
+                            <IconWrapper
+                                key={index}
+                                icon={item.icon}
+                                title={item.title}
+                                link={item.link}
+                            />
+                        ))}
+                    </div>
 
-  return (
-    <>
-      <div className="bg-neptune-400 text-neptune-900 shadow-lg py-2 lg:flex lg:items-center">
-        <div className="text-neptune-900 font-bold text-center uppercase text-lg lg:text-xl lg:ml-5">
-          <Link to="/">HackaTour</Link>
-          <div className="lg:hidden inline ml-5 text-neptune-900">
-            <button onClick={handleToggle} className="cursor-pointer">
-              <AccountCircleOutlinedIcon />
-            </button>
-          </div>
-        </div>
-        <div className="flex justify-center flex-wrap mt-2 gap-5 lg:mt-0 lg:mx-auto">
-          {/* Avion */}
-          <HeaderIcons
-            icon={<AirplaneTicketOutlinedIcon />}
-            title="Vuelos"
-            link="/flights"
-          />
-          {/* Hotel */}
-          <HeaderIcons
-            icon={<BedOutlinedIcon />}
-            title="Hoteles"
-            link="/hotels"
-          />
-          {/* Auto */}
-          <HeaderIcons
-            icon={<TimeToLeaveOutlinedIcon />}
-            title="Autos"
-            link="/cars"
-          />
-          {/* Colectivo */}
-          <HeaderIcons
-            icon={<DirectionsBusFilledOutlinedIcon />}
-            title="Micros"
-            link="/buses"
-          />
-          {/* Tren */}
-          <HeaderIcons
-            icon={<TrainOutlinedIcon />}
-            title="Trenes"
-            link="/trains"
-          />
-          {/* Excursiones */}
-          <HeaderIcons
-            icon={<KayakingOutlinedIcon />}
-            title="Salidas"
-            link="/activities"
-          />
-        </div>
-        <div className="hidden lg:flex lg:justify-center lg:mr-5 text-neptune-900">
-          <Link to="/login" className="cursor-pointer">
-            <AccountCircleOutlinedIcon />
-            <div className="hidden lg:inline lg:pl-2">Iniciar Sesion</div>
-          </Link>
-        </div>
-      </div>
-      {showModal && <ModalContainer onClose={handleToggle} />}
-    </>
-  );
+                    <div className='flex items-center'>
+                        <button className='text-white focus:outline-none lg:hidden'>
+                            <HeaderBurgerMenu menuMap={menuMap} />
+                        </button>
+                        <Link to={"/"} className='flex-shrink-0 ml-4 z-50'>
+                            <div className='absolute left-1/2 top-3 transform -translate-x-1/2 bg-white border-4 border-gray-800 rounded-full overflow-hidden'>
+                                <img src={logo1} alt='logo' className='w-20' />
+                            </div>
+                        </Link>
+                    </div>
+
+                    <div className='flex items-center'>
+                        <IconWrapper
+                            icon={<AccountCircleOutlinedIcon />}
+                            title='Iniciar sesión'
+                            link='/login'
+                        />
+                    </div>
+                </div>
+            </nav>
+        </>
+    );
 };
 
 export default Header;
