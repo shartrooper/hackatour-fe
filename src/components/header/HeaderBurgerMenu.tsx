@@ -19,7 +19,7 @@ interface HeaderBurgerMenuProps {
 
 const HeaderBurgerMenu: React.FC<HeaderBurgerMenuProps> = ({ menuMap }) => {
     return (
-        <NavigationMenu>
+        <NavigationMenu className='text-white'>
             <NavigationMenuList>
                 <NavigationMenuItem>
                     <NavigationMenuTrigger>

@@ -62,9 +62,7 @@ const Header = () => {
                     </div>
 
                     <div className='flex items-center'>
-                        <button className='text-white focus:outline-none lg:hidden'>
-                            <HeaderBurgerMenu menuMap={menuMap} />
-                        </button>
+                        <HeaderBurgerMenu menuMap={menuMap} />
                         <Link to={"/"} className='flex-shrink-0 ml-4 z-50'>
                             <div className='absolute left-1/2 top-3 transform -translate-x-1/2 bg-white border-4 border-gray-800 rounded-full overflow-hidden'>
                                 <img src={logo1} alt='logo' className='w-20' />
