@@ -1,5 +1,5 @@
-import AppButton from "../ui/button/AppButton";
-import AppInput from "../ui/input/AppInput";
+import { AppButton } from "../ui/button";
+import { AppInput } from "../ui/input";
 import CarouselOffers from "./CarouselOffers";
 
 const Hero = () => {

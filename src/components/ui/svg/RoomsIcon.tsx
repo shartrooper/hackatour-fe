@@ -2,7 +2,7 @@ interface RoomsIconProps {
     className?: string;
 }
 
-const RoomsIcon: React.FC<RoomsIconProps> = ({ className }) => (
+export const RoomsIcon: React.FC<RoomsIconProps> = ({ className }) => (
     <svg
         viewBox='0 0 1024 1024'
         className={className}
@@ -26,5 +26,3 @@ const RoomsIcon: React.FC<RoomsIconProps> = ({ className }) => (
         </g>
     </svg>
 );
-
-export default RoomsIcon;

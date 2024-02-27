@@ -1,10 +1,9 @@
-import HeaderIcons from "../ui/IconWrapper";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import XIcon from "@mui/icons-material/X";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import YouTubeIcon from "@mui/icons-material/YouTube";
 import { LinkedinIcon } from "lucide-react";
-
+import HeaderIcons from "../ui/iconWrapper";
 import logo2 from "/images/logo2.png";
 import { Link } from "react-router-dom";
 

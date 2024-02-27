@@ -9,7 +9,7 @@ interface OutlinedButtonProps {
     disabled?: boolean;
 }
 
-const OutlinedButton: React.FC<OutlinedButtonProps> = ({ children, url, disabled }) => {
+export const OutlinedButton: React.FC<OutlinedButtonProps> = ({ children, url, disabled }) => {
     return (
         <Link
             to={disabled ? "#" : url}
@@ -22,5 +22,3 @@ const OutlinedButton: React.FC<OutlinedButtonProps> = ({ children, url, disabled
         </Link>
     );
 };
-
-export default OutlinedButton;

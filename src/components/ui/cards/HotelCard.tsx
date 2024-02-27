@@ -1,11 +1,8 @@
 import { useState } from "react";
-import Ribbon from "../Ribbon";
-import AppButton from "../button/AppButton";
-import HotelLocationIcon from "../svg/HotelLocationIcon";
-import MoonIcon from "../svg/MoonIcon";
-import RoomsIcon from "../svg/RoomsIcon";
-import StarIcon from "../svg/StarIcon";
-import { Skeleton } from "../Skeleton";
+import Ribbon from "../ribbon";
+import { Skeleton } from "../skeleton";
+import { AppButton } from "../button";
+import { HotelLocationIcon, MoonIcon, RoomsIcon, StarIcon } from "../svg";
 
 interface HotelCardProps {
   name: string;
@@ -24,7 +21,7 @@ interface HotelCardProps {
   outDate: string;
 }
 
-const HotelCard: React.FC<HotelCardProps> = ({
+export const HotelCard: React.FC<HotelCardProps> = ({
   name,
   price,
   nights,
@@ -133,5 +130,3 @@ const HotelCard: React.FC<HotelCardProps> = ({
     </div>
   );
 };
-
-export default HotelCard;

@@ -2,7 +2,7 @@ interface HotelLocationProps {
     className?: string;
 }
 
-const HotelLocation: React.FC<HotelLocationProps> = ({ className }) => (
+export const HotelLocationIcon: React.FC<HotelLocationProps> = ({ className }) => (
     <svg className={className} viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'>
         <defs>
             <style>
@@ -18,5 +18,3 @@ const HotelLocation: React.FC<HotelLocationProps> = ({ className }) => (
         <line className='cls-1' x1='9.14' y1='10.09' x2='14.86' y2='10.09' />
     </svg>
 );
-
-export default HotelLocation;

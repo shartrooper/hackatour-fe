@@ -2,7 +2,7 @@ interface StarIconProps {
     className?: string;
 }
 
-const StarIcon: React.FC<StarIconProps> = ({ className }) => (
+export const StarIcon: React.FC<StarIconProps> = ({ className }) => (
     <svg
         className={className}
         version='1.1'
@@ -32,5 +32,3 @@ const StarIcon: React.FC<StarIconProps> = ({ className }) => (
         </g>
     </svg>
 );
-
-export default StarIcon;

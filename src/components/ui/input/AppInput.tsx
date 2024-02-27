@@ -4,7 +4,7 @@ interface AppInputProps {
     placeholder: string;
 }
 
-const AppInput: React.FC<AppInputProps> = ({ placeholder }) => {
+export const AppInput: React.FC<AppInputProps> = ({ placeholder }) => {
     return (
         <div>
             <div className='relative max-w-xs mt-2'>
@@ -18,4 +18,3 @@ const AppInput: React.FC<AppInputProps> = ({ placeholder }) => {
     );
 };
 
-export default AppInput;

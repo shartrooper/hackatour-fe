@@ -2,7 +2,7 @@ interface MoonIconProps {
     className?: string;
 }
 
-const MoonIcon: React.FC<MoonIconProps> = ({ className }) => (
+export const MoonIcon: React.FC<MoonIconProps> = ({ className }) => (
     <svg
         className={className}
         version='1.1'
@@ -47,5 +47,3 @@ const MoonIcon: React.FC<MoonIconProps> = ({ className }) => (
         </g>
     </svg>
 );
-
-export default MoonIcon;

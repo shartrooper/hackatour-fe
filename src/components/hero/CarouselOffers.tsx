@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
-import { Carousel, CarouselContent, CarouselItem } from "../ui/Carousel";
 import Autoplay from "embla-carousel-autoplay";
 import CarouselOffersCard from "./CarouselOffersCard";
 import fakeData from "@/config/fakeData.json";
+import { Carousel, CarouselContent, CarouselItem } from "../ui/carousel";
 
 interface Offer {
   id: number;

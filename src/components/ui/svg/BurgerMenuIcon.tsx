@@ -2,7 +2,7 @@ interface BurgerMenuIconProps {
     className?: string;
 }
 
-const BurgerMenuIcon: React.FC<BurgerMenuIconProps> = ({ className }) => {
+export const BurgerMenuIcon: React.FC<BurgerMenuIconProps> = ({ className }) => {
     return (
         <svg
             className={className}
@@ -18,5 +18,3 @@ const BurgerMenuIcon: React.FC<BurgerMenuIconProps> = ({ className }) => {
         </svg>
     );
 };
-
-export default BurgerMenuIcon;

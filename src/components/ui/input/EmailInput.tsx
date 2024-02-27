@@ -4,7 +4,7 @@ interface EmailInputProps {
     placeholder: string;
 }
 
-const EmailInput: React.FC<EmailInputProps> = ({ placeholder }) => {
+export const EmailInput: React.FC<EmailInputProps> = ({ placeholder }) => {
     return (
         <div className='relative max-w-xs'>
             <svg
@@ -28,5 +28,3 @@ const EmailInput: React.FC<EmailInputProps> = ({ placeholder }) => {
         </div>
     );
 };
-
-export default EmailInput;

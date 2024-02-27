@@ -9,7 +9,7 @@ interface AppButtonProps {
     disabled?: boolean;
 }
 
-const AppButton: React.FC<AppButtonProps> = ({ children, url, disabled }) => {
+export const AppButton: React.FC<AppButtonProps> = ({ children, url, disabled }) => {
     return (
         <Link
             to={disabled ? "#" : url}
@@ -22,5 +22,3 @@ const AppButton: React.FC<AppButtonProps> = ({ children, url, disabled }) => {
         </Link>
     );
 };
-
-export default AppButton;

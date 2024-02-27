@@ -5,7 +5,7 @@ interface PasswordInputProps {
     title: string;
 }
 
-const PasswordInput: React.FC<PasswordInputProps> = ({ placeholder, title }) => {
+export const PasswordInput: React.FC<PasswordInputProps> = ({ placeholder, title }) => {
     const [isPasswordHidden, setPasswordHidden] = useState(true);
     return (
         <div>
@@ -58,5 +58,3 @@ const PasswordInput: React.FC<PasswordInputProps> = ({ placeholder, title }) => 
         </div>
     );
 };
-
-export default PasswordInput;
