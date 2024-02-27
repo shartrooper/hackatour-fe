@@ -12,7 +12,7 @@ const Footer = () => {
     return (
         <>
             <footer className='text-gray-600 body-font'>
-                <hr className='border-gray-300 mt-5' />
+                <hr className='border-gray-300' />
                 <div className='container px-5 py-5 mx-auto flex md:items-center lg:items-start md:flex-row md:flex-nowrap flex-wrap flex-col'>
                     <div className='w-64 flex-shrink-0 md:mx-0 mx-auto text-center md:text-left md:mt-0 mt-10'>
                         <img className='w-44 h-auto mx-auto' src={logo2} alt='HackaTour logo' />
