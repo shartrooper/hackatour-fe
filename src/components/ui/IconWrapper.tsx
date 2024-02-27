@@ -7,7 +7,7 @@ interface IconWrapperProps {
     link: string;
 }
 
-const HeaderIcons: React.FC<IconWrapperProps> = ({ icon, title, link }) => {
+export const HeaderIcons: React.FC<IconWrapperProps> = ({ icon, title, link }) => {
     return (
         <>
             <Link
@@ -19,5 +19,3 @@ const HeaderIcons: React.FC<IconWrapperProps> = ({ icon, title, link }) => {
         </>
     );
 };
-
-export default HeaderIcons;

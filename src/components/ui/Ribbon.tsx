@@ -5,7 +5,7 @@ interface RibbonProps {
     className?: string;
 }
 
-const Ribbon: React.FC<RibbonProps> = ({ children, className }) => {
+export const Ribbon: React.FC<RibbonProps> = ({ children, className }) => {
     return (
         <div className='absolute h-48 overflow-hidden'>
             <div
@@ -16,5 +16,3 @@ const Ribbon: React.FC<RibbonProps> = ({ children, className }) => {
         </div>
     );
 };
-
-export default Ribbon;

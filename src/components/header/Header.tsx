@@ -5,12 +5,11 @@ import DirectionsBusFilledOutlinedIcon from "@mui/icons-material/DirectionsBusFi
 import TrainOutlinedIcon from "@mui/icons-material/TrainOutlined";
 import KayakingOutlinedIcon from "@mui/icons-material/KayakingOutlined";
 import { HeaderBurgerMenu } from "./HeaderBurgerMenu";
-
 import AccountCircleOutlinedIcon from "@mui/icons-material/AccountCircleOutlined";
 import logo1 from "/images/logo1.png";
-import IconWrapper from "../ui/iconWrapper";
 
 import { Link } from "react-router-dom";
+import { HeaderIcons as IconWrapper } from "../ui/iconwrapper";
 
 export const Header = () => {
   const menuMap = [

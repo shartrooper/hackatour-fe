@@ -1,8 +1,8 @@
 import { useState } from "react";
-import Ribbon from "../ribbon";
 import { Skeleton } from "../skeleton";
 import { AppButton } from "../button";
 import { HotelLocationIcon, MoonIcon, RoomsIcon, StarIcon } from "../svg";
+import { Ribbon } from "../ribbon";
 
 interface HotelCardProps {
   name: string;
