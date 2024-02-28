@@ -12,25 +12,26 @@ interface Offer {
     destinationImage: string;
 }
 
-const TripCard: React.FC<{ offer: Offer }> = ({ offer }) => {
+const CarouselOffersCard: React.FC<{ offer: Offer }> = ({ offer }) => {
+    const { destination, destinationImage, origin, price } = offer;
     return (
         <>
-            <Ribbon>{offer.destination}</Ribbon>
+            <Ribbon>{destination}</Ribbon>
             <div className='flex gap-5 bg-white rounded-lg'>
                 <img
-                    src={offer.destinationImage}
-                    alt={offer.destination}
+                    src={destinationImage}
+                    alt={destination}
                     className='w-32 h-auto object-cover rounded-s-md'
                 />
                 <div className='flex flex-col my-2'>
                     <p className='text-xs text-zinc-900 uppercase'>Ida y vuelta</p>
                     <h2 className='font-bold text-zinc-900'>
-                        {offer.origin} - {offer.destination}
+                        {origin} - {destination}
                     </h2>
                     <div className='mt-5'>
                         <p>Desde</p>
                         <p className='text-zinc-900 text-lg font-bold'>
-                            {offer.price.toLocaleString("es-AR")} USD
+                            {price.toLocaleString("es-AR")} USD
                         </p>
                     </div>
                 </div>
@@ -39,4 +40,4 @@ const TripCard: React.FC<{ offer: Offer }> = ({ offer }) => {
     );
 };
 
-export default TripCard;
+export default CarouselOffersCard;
