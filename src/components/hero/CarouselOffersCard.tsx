@@ -1,5 +1,5 @@
 import React from "react";
-import { Ribbon } from "../ui/ribbon";
+import { Ribbon } from "../ui/Ribbon";
 
 interface Offer {
     id: number;
