@@ -36,7 +36,7 @@ const Register = () => {
               <p className="">
                 Ya tienes una cuenta?{" "}
                 <Link
-                  to="/login"
+                  to="/manage/login"
                   className="font-medium text-neptune-600 hover:text-neptune-500"
                 >
                   Inicia sesión

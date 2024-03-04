@@ -35,7 +35,7 @@ const Login = () => {
               <p className="">
                 No tienes una cuenta?{" "}
                 <Link
-                  to="/register"
+                  to="/manage/register"
                   className="font-medium text-neptune-600 hover:text-neptune-500"
                 >
                   Registrate

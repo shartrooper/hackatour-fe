@@ -73,7 +73,7 @@ export const Header = () => {
                         <IconWrapper
                             icon={<AccountCircleOutlinedIcon />}
                             title='Iniciar sesión'
-                            link='/login'
+                            link='/manage/login'
                         />
                     </div>
                 </div>
